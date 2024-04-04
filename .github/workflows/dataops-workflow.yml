@@ -1,6 +1,17 @@
-Say Hello:
-  tags: 
-    - dataops-101-shared-runner
-  image: stefen2020/dataops-python3-runner:1-stable
-  script:
-    - echo "Hello, World!"
+name: Say Hello Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    container:
+      image: stefen2020/dataops-python3-runner:1-stable
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Say Hello
+      run: echo "Hello, World!"
