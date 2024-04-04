@@ -7,9 +7,7 @@ on:
 
 jobs:
   say_hello:
-    runs-on: ubuntu-latest
-    container:
-      image: stefen2020/dataops-python3-runner:1-stable
+    runs-on: [self-hosted, Linux, X64]  # Modifier ici pour utiliser votre runner auto-hébergé
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
