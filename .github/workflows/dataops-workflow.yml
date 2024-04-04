@@ -1,0 +1,6 @@
+Say Hello:
+  tags: 
+    - dataops-101-shared-runner
+  image: stefen2020/dataops-python3-runner:1-stable
+  script:
+    - echo "Hello, World!"
